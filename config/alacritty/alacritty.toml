@@ -1,0 +1,41 @@
+[general]
+import = ["rose-pine-moon.toml"]
+
+[window]
+opacity = 0.85
+decorations = "Full"
+decorations_theme_variant = "Dark"
+
+[window.padding]
+x = 12
+y = 12
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[keyboard]
+bindings = [
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
+
+[env]
+TERM = "xterm-256color"
+
