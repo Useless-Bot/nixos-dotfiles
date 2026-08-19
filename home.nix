@@ -12,9 +12,9 @@ let
     nvim = "nvim";
     alacritty = "alacritty";
     ranger = "ranger";
-    librewolf = "librewolf";
     niri = "niri";
     noctalia = "noctalia";
+    greetd = "greetd";
   };
 in
 
@@ -40,7 +40,6 @@ in
     nil
     nixpkgs-fmt
     ripgrep
-    nodejs
     gcc
   ];
 

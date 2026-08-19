@@ -3,7 +3,6 @@
   lib,
   pkgs,
   inputs,
-  ly-balatro,
   ...
 }:
 {
@@ -43,29 +42,14 @@
   services.udisks2.enable = true;
   time.timeZone = "America/Los_Angeles";
 
-  services.xserver = {
-    enable = true;
-    autoRepeatDelay = 200;
-    autoRepeatInterval = 35;
-  };
-
   programs.niri.enable = true;
-  services.displayManager.ly.package = lib.mkForce ly-balatro.packages.${pkgs.stdenv.hostPlatform.system}.default;
-
-  services.displayManager.ly.settings = {
-    animation = "balatro";
-    full_color = true;
-    clock = "%H:%M";
-
-    balatro_col1 = "0x00DE443B";
-    balatro_col2 = "0x000055B4";
-    balatro_col3 = "0x20000000";
-  };
-
-  services.picom = {
+  services.greetd = {
     enable = true;
-    backend = "glx";
-    fade = true;
+    settings = {
+	default_session = {
+	    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri-session";
+	};
+    };
   };
 
   users.users.hayden = {
@@ -75,44 +59,67 @@
       "audio"
     ]; 
     packages = with pkgs; [
+      # CLI utility
       tree
+
+      # Dev tools
+      tree-sitter
+
+      # Security
+      burpsuite
+
+      # Apps
       discord
       steam
-      burpsuite
     ];
   };
 
   environment.systemPackages = with pkgs; [
+     # Editors, language servers & dev tools
     neovim
-    pfetch
-    wget
-    alacritty
+    nixd
+    pyright
+    vim-language-server
+    lua-language-server
+    lua
+    luarocks
+    nodejs
+    zig
     git
+    gnumake
+
+    # Terminal & CLI utilities
+    alacritty
     ranger
-    feh
-    librewolf
-    mullvad-vpn
-    picom
+    pfetch
     bat
     xclip
     tealdeer
+    pulsemixer
+    unzip
+    wget
+    feh
+
+    # Security & networking
+    mullvad-vpn
     keepassxc
     nmap
-    pulsemixer
-    luarocks
-    gnumake
-    unzip
-    zig
+
+    # Browser
+    librewolf
+
+    # Wayland desktop (niri) & compositing
+    picom
     quickshell
     swaybg
     xwayland-satellite
-    tree-sitter
     inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
