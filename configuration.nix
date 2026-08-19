@@ -36,7 +36,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "metis"; # Define your hostname.
+  networking.hostName = "metis";
 
   networking.networkmanager.enable = true;
   services.udisks2.enable = true;
@@ -47,7 +47,7 @@
     enable = true;
     settings = {
 	default_session = {
-	    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --config /home/hayden/.config/greetd/config.toml --cmd niri-session";
+	    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri";
 	};
     };
   };

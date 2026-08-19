@@ -14,7 +14,6 @@ let
     ranger = "ranger";
     niri = "niri";
     noctalia = "noctalia";
-    greetd = "greetd";
   };
 in
 
