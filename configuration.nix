@@ -26,6 +26,7 @@
 
   hardware.alsa.enablePersistence = true;
   services.pipewire.enable = true;
+  security.rtkit.enable = true;
   services.upower.enable = true;
 
   boot.loader.systemd-boot = {
@@ -113,7 +114,7 @@
     quickshell
     swaybg
     xwayland-satellite
-    inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   fonts.packages = with pkgs; [
