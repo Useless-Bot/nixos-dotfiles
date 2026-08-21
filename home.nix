@@ -31,8 +31,7 @@ in
       vim = "nvim";
       clear = "pyroclear --random";
       nrs = "sudo nixos-rebuild switch --flake ~/Dots#metis";
-      up = "sudo nixos-rebuild switch --upgrade";
-      fup = "sudo nix flake update && sudo nixos-rebuild switch --flake ~/Dots#metis"; 
+      up = "sudo nix flake update && sudo nixos-rebuild switch --flake ~/Dots#metis"; 
     };
   };
 
