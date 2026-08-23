@@ -142,12 +142,15 @@ window-rule {
 }
 
 output "DP-2" {
-   mode "2560x1440@165"
+   mode "2560x1440@164.835"
    variable-refresh-rate
    transform "270"
    position x=0 y=-753
    hot-corners {
       off
+   }
+   layout {
+       default-column-width { proportion 1.0; }
    }
 }
 
@@ -158,6 +161,9 @@ output "DP-1" {
    focus-at-startup
    hot-corners {
       off
+   }
+   layout {
+       default-column-width { proportion 0.25; }
    }
 }
 
