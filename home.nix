@@ -37,10 +37,18 @@ in
 
   #packages
   home.packages = with pkgs; [
-    nil
-    nixpkgs-fmt
-    ripgrep
-    gcc
+      # CLI utility
+      tree
+
+      # Dev tools
+      tree-sitter
+
+      # Security
+      burpsuite
+
+      # Apps
+      discord
+      steam
   ];
 
   #Recursion for dotfiles, programs to look for are defined above.

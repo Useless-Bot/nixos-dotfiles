@@ -60,18 +60,6 @@
       "audio"
     ]; 
     packages = with pkgs; [
-      # CLI utility
-      tree
-
-      # Dev tools
-      tree-sitter
-
-      # Security
-      burpsuite
-
-      # Apps
-      discord
-      steam
     ];
   };
 
@@ -89,11 +77,15 @@
     zig
     git
     gnumake
-
+    nil
+    nixpkgs-fmt
+    ripgrep
+    gcc
+    
     # Terminal & CLI utilities
     alacritty
     ranger
-    pfetch
+    fastfetch
     bat
     xclip
     tealdeer
