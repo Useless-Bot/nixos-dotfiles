@@ -82,6 +82,7 @@
     pyright
     vim-language-server
     lua-language-server
+    rust-analyzer
     lua
     luarocks
     nodejs
@@ -110,7 +111,6 @@
     librewolf
 
     # Wayland desktop (niri) & compositing
-    picom
     quickshell
     swaybg
     xwayland-satellite
