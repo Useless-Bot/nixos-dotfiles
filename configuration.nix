@@ -28,6 +28,7 @@
   services.pipewire.enable = true;
   security.rtkit.enable = true;
   services.upower.enable = true;
+  services.udev.packages = [ pkgs.dolphin-emu ];
 
   boot.loader.systemd-boot = {
     enable = true;

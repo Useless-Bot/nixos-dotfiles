@@ -49,6 +49,7 @@ in
       # Apps
       discord
       steam
+      dolphin-emu
   ];
 
   #Recursion for dotfiles, programs to look for are defined above.
