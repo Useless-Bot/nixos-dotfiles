@@ -29,6 +29,7 @@
   security.rtkit.enable = true;
   services.upower.enable = true;
   services.udev.packages = [ pkgs.dolphin-emu ];
+  programs.gamemode.enable = true;
 
   boot.loader.systemd-boot = {
     enable = true;
