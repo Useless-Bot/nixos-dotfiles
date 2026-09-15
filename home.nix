@@ -48,7 +48,6 @@ in
 
       # Apps
       discord
-      steam
       dolphin-emu
   ];
 

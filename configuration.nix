@@ -38,6 +38,8 @@
     configurationLimit = 5;
   };
 
+  services.xserver.videoDrivers = [ "amdgpu" ];
+
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -46,6 +48,14 @@
   networking.networkmanager.enable = true;
   services.udisks2.enable = true;
   time.timeZone = "America/Los_Angeles";
+
+  programs.steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+      dedicatedServer.openFirewall = true;
+      gamescopeSession.enable = true;
+  };
+
 
   programs.niri.enable = true;
   services.greetd = {
@@ -71,6 +81,7 @@
      # Editors, language servers & dev tools
     neovim
     nixd
+    thunar
     pyright
     vim-language-server
     lua-language-server
