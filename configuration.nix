@@ -57,12 +57,19 @@
   };
 
 
-  programs.niri.enable = true;
-  services.greetd = {
+  programs.hyprland = {
+      enable = true;
+      withUWSM = true;
+      xwayland.enable = true;
+    };
+  
+  programs.waybar.enable = true;
+
+services.greetd = {
     enable = true;
     settings = {
 	default_session = {
-	    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd niri-session";
+	    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd start-hyprland";
 	};
     };
   };
@@ -122,7 +129,8 @@
     quickshell
     swaybg
     xwayland-satellite
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    hyprpaper
+    hyprlauncher
   ];
 
   fonts.packages = with pkgs; [

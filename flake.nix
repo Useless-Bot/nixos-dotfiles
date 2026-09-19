@@ -3,11 +3,6 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     pyroclear.url = "github:shreyanth-sureshkrishnaa/pyroclear";
 
     home-manager = {
@@ -23,7 +18,6 @@
       nixpkgs,
       pyroclear,
       home-manager,
-      noctalia,
       ...
     }:
     {
@@ -36,8 +30,6 @@
 
         modules = [
           ./configuration.nix
-
-          noctalia.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {

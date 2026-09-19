@@ -12,8 +12,8 @@ let
     nvim = "nvim";
     alacritty = "alacritty";
     ranger = "ranger";
-    niri = "niri";
-    noctalia = "noctalia";
+    hypr = "hypr";
+    waybar = "waybar";
   };
 in
 
@@ -58,18 +58,18 @@ in
   }) configs;
 
   #Program configs.
-  programs.rofi = {
-    enable = true;
-    theme = "gruvbox-dark-soft";
-    modes = [
-      "drun"
-      "run"
-      "window"
-    ];
-    extraConfig = {
-      show-icons = true;
-    };
-  };
+ #programs.rofi = {
+ ##  enable = true;
+ ##  theme = "gruvbox-dark-soft";
+ ##  modes = [
+ ##    "drun"
+ # #   "run"
+ # #   "window"
+ #  #];
+ ##  extraConfig = {
+ ##    show-icons = true;
+ ##  };
+ ##};
 
   home.file.".icons/default".source = "${pkgs.vanilla-dmz}/share/icons/Vanilla-DMZ";
 
@@ -77,5 +77,10 @@ in
     enable = true;
     settings = {
     };
+  };
+
+  #Hyprland Settings
+  services.hyprpaper = {
+      enable = true;
   };
 }

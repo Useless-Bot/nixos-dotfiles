@@ -136,6 +136,11 @@ window-rule {
 }
 
 window-rule {
+  match title="Steam"
+  open-on-workspace "1"
+  open-maximized true
+}
+window-rule {
   match title="KeePassXC"
   open-on-workspace "4"
   open-maximized true
