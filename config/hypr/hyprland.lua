@@ -27,6 +27,7 @@ hl.monitor({
     mode     = "2560x1440@165",
     position = "0x0",
     scale    = "auto",
+    vrr = 1
 })
 
 hl.monitor({
@@ -35,6 +36,7 @@ hl.monitor({
     scale = "auto",
     position = "-1440x-758",
     transform = 3,
+    vrr = 1
 })
 
 ---------------------
@@ -100,7 +102,7 @@ hl.env("HYPRCURSOR_SIZE", "16")
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 20,
+        gaps_out = 10,
 
         border_size = 2,
 
@@ -177,7 +179,16 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.
--- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = 1, monitor = "DP-1" })
+hl.workspace_rule({ workspace = 2, monitor = "DP-1" })
+hl.workspace_rule({ workspace = 3, monitor = "DP-1" })
+hl.workspace_rule({ workspace = 4, monitor = "DP-1" })
+hl.workspace_rule({ workspace = 5, monitor = "DP-1" })
+hl.workspace_rule({ workspace = 6, monitor = "DP-2" })
+hl.workspace_rule({ workspace = 7, monitor = "DP-2" })
+hl.workspace_rule({ workspace = 8, monitor = "DP-2" })
+hl.workspace_rule({ workspace = 9, monitor = "DP-2" })
+hl.workspace_rule({ workspace = 10, monitor = "DP-2" })
 -- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
 -- hl.window_rule({
 --     name  = "no-gaps-wtv1",
