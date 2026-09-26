@@ -49,6 +49,8 @@
   services.udisks2.enable = true;
   time.timeZone = "America/Los_Angeles";
 
+ # programs.firefox.enable = true;
+
   programs.steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -131,6 +133,8 @@ services.greetd = {
     xwayland-satellite
     hyprpaper
     hyprlauncher
+    hyprtoolkit
+    grim
   ];
 
   fonts.packages = with pkgs; [

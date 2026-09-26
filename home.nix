@@ -79,6 +79,16 @@ in
     };
   };
 
+  services.flameshot = {
+      enable = true;
+      settings = {
+          General = {
+              useGrimAdapter = true;
+              disabledGrimWarning = true;
+          };
+      };
+  };
+
   #Hyprland Settings
   services.hyprpaper = {
       enable = true;
