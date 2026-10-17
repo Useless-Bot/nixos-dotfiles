@@ -24,8 +24,6 @@
     enable32Bit = true;
   };
   
-  hardware.logitech.wireless.enable = true;
-  hardware.logitech.wireless.enableGraphical = true;
   hardware.alsa.enablePersistence = true;
   services.pipewire.enable = true;
   security.rtkit.enable = true;
